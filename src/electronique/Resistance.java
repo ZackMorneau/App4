@@ -1,13 +1,12 @@
 package electronique;
 
 public class Resistance extends Composant{
-    double a;
-    public Resistance(double a){
-        super();
-        this.a=a;
+    double Ohm;
+    public Resistance(double ohm){
+        this.Ohm=ohm;
     }
 
     public double calculerResistance() {
-        return 0;
+        return this.Ohm;
     }
 }

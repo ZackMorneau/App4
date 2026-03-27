@@ -1,7 +1,6 @@
 package electronique;
 
-public abstract class Composant {
-
+public abstract class Composant implements Icomposant {
     public Composant(){
 
     }
