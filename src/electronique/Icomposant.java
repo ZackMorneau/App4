@@ -1,5 +1,6 @@
 package electronique;
 
 public interface Icomposant {
-    double calculerResistance();
+
+    public double calculerResistance();
 }
