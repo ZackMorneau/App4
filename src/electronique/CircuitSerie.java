@@ -9,11 +9,9 @@ public class CircuitSerie extends Circuit {
 
     public double calculerResistance() {
         double SommeResisTotal = 0;
-        for (int i = 0; composants.get(i) != null; i++) {
+        for (int i = 0; i < composants.size(); i++) {
             SommeResisTotal += composants.get(i).calculerResistance();
         }
-
-
         return SommeResisTotal;
     }
 }

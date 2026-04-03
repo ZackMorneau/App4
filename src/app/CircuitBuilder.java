@@ -16,14 +16,17 @@ public class CircuitBuilder {
     private String Chemin;
     public CircuitBuilder(String cheminDuFichier) {
 this.Chemin=cheminDuFichier;
-
+    }
+    public double calculerResistance() {
+        return construireCircuit().calculerResistance();
     }
 
     public Composant construireCircuit() {
         ObjectMapper mapper = new ObjectMapper();
         try {
             JsonNode donneesCircuit = mapper.readTree(new File(Chemin));
-            return lireComposant(donneesCircuit);
+            JsonNode circuitNode = donneesCircuit.get("circuit");
+            return lireComposant(circuitNode);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
