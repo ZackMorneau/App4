@@ -21,7 +21,7 @@ public class CircuitApp {
     }
 
     public void choixDeFichier() {
-        for (int i = 1; i <=3; i++) {
+        for (int i = 1; i <= fichier.length; i++) {
             System.out.println("[" + i + "] " + fichier[i-1].getName());
         }
         if (NOMBRE_D_ITERATION==0) {
