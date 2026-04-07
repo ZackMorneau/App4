@@ -17,7 +17,7 @@ public class CircuitApp {
     }
 
     public String messageDemarage() {
-        return "Bienvenu, ce programme sert a calculer la résistance total d'un circuit a partir d'un fichier JSON. \nVoici les fichiers disponibles et les actions que j'apercois: ";
+        return "Bienvenue, ce programme sert à calculer la résistance total d'un circuit à partir d'un fichier JSON. \nVoici les fichiers disponibles que j'apercois: ";
     }
 
     public void choixDeFichier() {
@@ -30,7 +30,7 @@ public class CircuitApp {
         choix();
     }
     public void choix(){
-        System.out.println("Veillez faire un choix :");
+        System.out.println(" Choisissez :");
         Scanner scanner = new Scanner(System.in);
         String reponse =scanner.nextLine();
         try {
@@ -44,19 +44,19 @@ public class CircuitApp {
                 double resultat = new CircuitBuilder(chemindufichier).calculerResistance();
                affichageReistance(resultat);
             } else {
-            System.out.println("Vôtre réponse est invalide !");
-            System.out.println("Veillez selectionnez un fichier ou quittez en tapant Q.");
+            System.out.println("Votre réponse est invalide!");
+            System.out.println("Selectionnez un fichier ou quitter en tapant Q.");
             choixDeFichier();
             }
         }catch (NumberFormatException e){
-            System.out.println("Vôtre réponse est invalide !");
-            System.out.println("Veillez selectionnez un fichier ou quittez en tapant Q.");
+            System.out.println("Votre réponse est invalide!");
+            System.out.println("Selectionnez un fichier ou quitter en tapant Q.");
             choixDeFichier();
         }
 
     }
 public void quitterProgramme(){
-    System.out.println("Vous avez quittez le programme avec succes.");
+    System.out.println("Vous avez quitté le programme avec succès.");
 }
 public void affichageReistance(double resistance) {
     double arrondi = Math.round(resistance * 100.0) / 100.0;
@@ -66,7 +66,7 @@ public void affichageReistance(double resistance) {
 public void choixDeFichier2(){
     System.out.println("[Q] Quitter le programme");
         System.out.println("[R] Tester un autre fichier");
-    System.out.println("Veillez faire un choix :");
+    System.out.println(" Choisissez :");
     Scanner scanner = new Scanner(System.in);
     String reponse =scanner.nextLine();
 
@@ -75,7 +75,7 @@ choixDeFichier();
     } else  if ((reponse.equals("Q"))||(reponse.equals("q"))){
         quitterProgramme();
     } else {
-        System.out.println("Vôtre réponse est invalide !");
+        System.out.println("Votre réponse est invalide!");
         choixDeFichier2();
     }
 
